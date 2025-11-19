@@ -23,3 +23,28 @@ bun.lock
 *.njsproj
 *.sln
 *.sw?
+
+# WordPress環境（サンプルソース）
+vite-app/src/
+
+# WordPress環境（wp-env生成物）
+wordpress/plugins/
+wordpress/themes/
+wordpress/wp-content/
+wordpress/wp-includes/
+wordpress/wp-admin/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ロックファイル（テンプレートでは各自生成）
+bun.lock
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# バックアップ
+*.bak
+*.backup

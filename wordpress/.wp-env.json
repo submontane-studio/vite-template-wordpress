@@ -1,10 +1,7 @@
 {
-  "core": "WordPress/latest",
+  "core": null,
   "phpVersion": "8.2",
-  "wpVersion": "latest",
-  "plugins": [
-    ""
-  ],
+  "plugins": [],
   "themes": [
     "./themes/wordpress-theme"
   ],

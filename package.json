@@ -7,7 +7,7 @@
     "wp:start": "cd wordpress && wp-env start",
     "wp:stop": "cd wordpress && wp-env stop",
     "wp:destroy": "cd wordpress && wp-env destroy",
-    "vite:dev": "cd vite-app && vite build --watch",
+    "vite:dev": "cd vite-app && vite",
     "vite:build": "cd vite-app && vite build",
     "vite:preview": "cd vite-app && vite preview",
     "lint": "biome check .",
