@@ -1,0 +1,11 @@
+{
+  "name": "vite-template-wordpress",
+  "display": "WordPress + Vite (SUBMONTANE STUDIO)",
+  "description": "A modern Shopify theme development setup powered by Vite, Sharp, and Biome.",
+  "tags": [
+    "vite",
+    "wordpress",
+    "biome",
+    "sharp"
+  ]
+}
