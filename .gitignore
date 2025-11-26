@@ -39,12 +39,21 @@ wordpress/wp-admin/
 .AppleDouble
 .LSOverride
 
-# ロックファイル（テンプレートでは各自生成）
+# ロックファイル（bun/yarn/pnpmは除外、package-lock.jsonは含める）
 bun.lock
-package-lock.json
 yarn.lock
 pnpm-lock.yaml
 
 # バックアップ
 *.bak
 *.backup
+
+# 環境変数
+.env
+.env.*
+!.env.example
+
+# npm設定（トークン含む）
+.npmrc
+
+.image-cache

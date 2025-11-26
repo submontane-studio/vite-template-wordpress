@@ -1,9 +1,9 @@
-import path from "node:path";
 import fs from "node:fs";
+import path from "node:path";
 import autoprefixer from "autoprefixer";
 import cssnano from "cssnano";
 import { defineConfig } from "vite";
-import { imageOptimizer } from "vite-plugin-image-optimizer";
+// @ts-expect-error vite-plugin-wordpress has no type declarations
 import { vitePluginWordpress } from "vite-plugin-wordpress";
 
 const themeName = "wordpress-theme";
@@ -15,23 +15,6 @@ export default defineConfig({
 		vitePluginWordpress({
 			themePath: `../../wordpress/themes/${themeName}`,
 			baseFile: "functions.php",
-		}),
-		imageOptimizer({
-			patterns: [
-				{
-					from: path.resolve("./src/assets/images/**/*"),
-					to: "images",
-				},
-			],
-			outDir: `../wordpress/themes/${themeName}/assets`,
-			quality: {
-				jpeg: 82,
-				png: 80,
-				webp: 80,
-				avif: 70,
-			},
-			generateWebp: true,
-			generateAvif: true,
 		}),
 		{
 			name: "fix-css-paths",
@@ -85,7 +68,7 @@ export default defineConfig({
 	},
 
 	css: {
-		devSourcemap: true,
+		devSourcemap: process.env.NODE_ENV !== "production",
 		postcss: {
 			plugins: [
 				autoprefixer(),
